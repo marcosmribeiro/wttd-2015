@@ -34,6 +34,7 @@ DEFAULT_FROM_EMAIL = 'contato@eventex.com.br'
 # Application definition
 
 INSTALLED_APPS = (
+    # Django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +42,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # 3rd
+    'django_extensions',
+
+    # App
     'eventex.core',
     'eventex.subscriptions',
 )
