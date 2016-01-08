@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     # 3rd
+    'test_without_migrations',
     'django_extensions',
 
     # App
