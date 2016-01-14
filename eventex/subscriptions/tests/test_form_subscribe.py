@@ -23,6 +23,12 @@ class SubscriptionFormTest(TestCase):
         code = 'length'
         self.assertFormErrorCode(form, field, code)
 
+    def test_name_must_be_captalized(self):
+        """O nome deve conter iniciais maiúsculas"""
+        # MARCOS ribeiro -> Marcos Ribeiro
+        form = self.make_validated_form(name='MARCOS ribeiro')
+        self.assertEqual('Marcos Ribeiro', form.cleaned_data['name'])
+
     def assertFormErrorCode(self, form, field, code):
         errors = form.errors.as_data()
         errors_list = errors[field]
